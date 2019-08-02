@@ -17,7 +17,13 @@ public class Main {
             String word = scannerWork.getWord();
 
             try {
-                stringWork.checkIfFirstDigit(word);
+                stringWork.checkIfSpecialFormat_FirstDigit(word);
+            } catch (MixedWordsException e) {
+                System.err.println("Uwaga!");
+            }
+
+            try {
+                stringWork.checkIfSpecialFormat_FirstLetter(word);
             } catch (MixedWordsException e) {
                 System.err.println("Uwaga!");
             }
@@ -26,9 +32,5 @@ public class Main {
                 flag = true;
             }
         } while (!flag);
-//        Character.isDigit(/**/)
-//        Character.isLetter(/**/)
     }
-
-
 }
